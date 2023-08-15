@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copy Input Text</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="count">
+            <h1>Coupon Code Copy</h1>
+            <input id="inputField" type="text" placeholder="Enter a word" value="Alfaz">
+            <button id="copyButton" class="button">Copy</button>
+        </div>
+
+    </section>
+
+  <script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+
+  var inputField = document.getElementById('inputField');
+  
+  inputField.select();
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  
+});
+
+  </script>
+</body>
+</html>
